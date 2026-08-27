@@ -1,4 +1,5 @@
 import { ArrowRight, BadgeCheck, Fuel } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import heroRefinery from "@/assets/hero-refinery.jpg";
 
@@ -27,12 +28,12 @@ export function HeroSection() {
             across Nigeria&apos;s downstream market and Africa at large.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="/our-services" className="btn-primary">
+            <Link to="/services" className="btn-primary">
               Explore Services <ArrowRight className="size-4" />
-            </a>
-            <a href="/contact" className="btn-outline text-on-charcoal">
+            </Link>
+            <Link to="/contact" className="btn-outline text-on-charcoal">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>

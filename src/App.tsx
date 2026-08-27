@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useSyncExternalStore } from "react";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -7,56 +7,113 @@ import { Assets } from "@/pages/assets";
 import { Contact } from "@/pages/contact";
 import { Home } from "@/pages";
 import { Services } from "@/pages/services";
+import { useEffect } from "react";
 
-const pages = {
+function PageMeta({ title, description }: { title: string; description: string }) {
+  useEffect(() => {
+    document.title = title;
+    upsertMeta("description", description);
+    upsertMeta("og:title", title, "property");
+    upsertMeta("og:description", description, "property");
+  }, [title, description]);
+
+  return null;
+}
+
+const pageMeta: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Pivot Integrated Energy Services Ltd - Energy For Tomorrow",
     description:
       "Pivot Integrated Energy Services Ltd provides affordable, reliable petroleum trading, importation, distribution, supply, aviation and storage solutions across Nigeria and Sub-Saharan Africa.",
-    component: Home,
   },
   "/about": {
     title: "About Us | Pivot Integrated Energy Services Ltd",
     description:
       "Pivot Integrated Energy Services Ltd is an indigenous oil and gas company founded in 2017, focused on trading, importation and distribution of refined petroleum products.",
-    component: About,
   },
   "/assets": {
     title: "Assets & Facilities | Pivot Integrated Energy Services Ltd",
     description:
       "Explore Pivot Integrated Energy's Dubai storage tank, Calabar tank farm and MT Yu Yi oil tanker.",
-    component: Assets,
   },
   "/contact": {
     title: "Contact Us | Pivot Integrated Energy Services Ltd",
     description:
       "Contact Pivot Integrated Energy Services Ltd for supply, distribution, petroleum trading and storage enquiries.",
-    component: Contact,
   },
   "/services": {
     title: "Our Services | Pivot Integrated Energy Services Ltd",
     description:
       "Bulk importation and trading, retail distribution, industrial supply and aviation energy services for public and private sector clients.",
-    component: Services,
   },
 };
 
-const aliases: Record<string, keyof typeof pages> = {
-  "/about-us": "/about",
-  "/assets-facilities": "/assets",
-  "/our-services": "/services",
-};
-
-type PagePath = keyof typeof pages;
-
-function subscribe(callback: () => void) {
-  window.addEventListener("popstate", callback);
-  return () => window.removeEventListener("popstate", callback);
-}
-
-function getPathname() {
-  const pathname = window.location.pathname.replace(/\/$/, "") || "/";
-  return aliases[pathname] ?? pathname;
+export function App() {
+  return (
+    <BrowserRouter>
+      <SiteHeader />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <PageMeta {...pageMeta["/"]} />
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <PageMeta {...pageMeta["/about"]} />
+              <About />
+            </>
+          }
+        />
+        <Route
+          path="/assets"
+          element={
+            <>
+              <PageMeta {...pageMeta["/assets"]} />
+              <Assets />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <PageMeta {...pageMeta["/contact"]} />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <>
+              <PageMeta {...pageMeta["/services"]} />
+              <Services />
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <PageMeta
+                title="Page Not Found | Pivot Integrated Energy Services Ltd"
+                description="The requested Pivot Integrated Energy Services Ltd page could not be found."
+              />
+              <NotFound />
+            </>
+          }
+        />
+      </Routes>
+      <SiteFooter />
+    </BrowserRouter>
+  );
 }
 
 function NotFound() {
@@ -69,44 +126,11 @@ function NotFound() {
           The page may have moved, but the main Pivot Integrated Energy site is ready from the
           homepage.
         </p>
-        <a href="/" className="btn-primary mt-8">
+        <Link to="/" className="btn-primary mt-8">
           Return Home
-        </a>
+        </Link>
       </div>
     </section>
-  );
-}
-
-export function App() {
-  const pathname = useSyncExternalStore(subscribe, getPathname);
-  const page = pages[pathname as PagePath];
-  const Page = page?.component ?? NotFound;
-
-  const metadata = useMemo(
-    () => ({
-      title: page?.title ?? "Page Not Found | Pivot Integrated Energy Services Ltd",
-      description:
-        page?.description ??
-        "The requested Pivot Integrated Energy Services Ltd page could not be found.",
-    }),
-    [page],
-  );
-
-  useEffect(() => {
-    document.title = metadata.title;
-    upsertMeta("description", metadata.description);
-    upsertMeta("og:title", metadata.title, "property");
-    upsertMeta("og:description", metadata.description, "property");
-  }, [metadata]);
-
-  return (
-    <div className="flex min-h-screen flex-col">
-      <SiteHeader />
-      <main className="flex-1">
-        <Page />
-      </main>
-      <SiteFooter />
-    </div>
   );
 }
 
