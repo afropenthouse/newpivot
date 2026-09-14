@@ -41,7 +41,7 @@ export function Contact() {
           <h2 className="headline-lg mt-4">
             Oil and gas enquiries, handled with operational clarity.
           </h2>
-          <p className="mt-5 text-base leading-8 text-muted-foreground">
+          <p className="mt-5 text-sm leading-7 text-muted-foreground">
             Share your product needs, delivery location, company details and any relevant
             attachment. The Pivot Integrated Energy team will follow up with the right commercial or
             operations contact.
@@ -50,8 +50,8 @@ export function Contact() {
           <div className="mt-8 grid gap-4">
             {offices.map((office) => (
               <div key={office.name} className="panel p-6">
-                <h3 className="font-display text-lg font-bold">{office.name}</h3>
-                <p className="mt-3 flex gap-3 text-sm leading-7 text-muted-foreground">
+                <h3 className="font-display text-base font-bold">{office.name}</h3>
+                <p className="mt-3 flex gap-3 text-sm leading-6 text-muted-foreground">
                   <MapPin className="mt-1 size-4 shrink-0 text-primary-dark" />
                   {office.address}
                 </p>
@@ -141,10 +141,10 @@ export function Contact() {
                 className="overflow-hidden rounded-lg border border-border bg-card shadow-panel"
               >
                 <div className="p-5">
-                  <h3 className="flex items-center gap-3 font-display text-lg font-bold">
+                  <h3 className="flex items-center gap-3 font-display text-base font-bold">
                     <Building2 className="size-5 text-primary-dark" /> {office.name}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{office.address}</p>
+                  <p className="mt-2 text-sm leading-5 text-muted-foreground">{office.address}</p>
                 </div>
                 <iframe
                   title={`${office.name} map`}

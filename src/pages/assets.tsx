@@ -43,7 +43,7 @@ export function Assets() {
           <div className="p-8 lg:p-12">
             <p className="label-caps text-primary-dark">Storage Tank - Location: Dubai</p>
             <h2 className="headline-lg mt-4">70,000 CBM capacity</h2>
-            <p className="mt-6 text-base leading-8 text-muted-foreground">
+            <p className="mt-6 text-sm leading-7 text-muted-foreground">
               A strategic storage tank positioned in Dubai to support international product
               sourcing, inventory management and trading partnerships.
             </p>
@@ -67,7 +67,7 @@ export function Assets() {
               <h2 className="headline-lg mt-4">28,000,000 litres of storage capacity.</h2>
             </div>
             <div className="rounded-lg border border-white/10 bg-white/[0.055] p-6">
-              <p className="flex gap-3 text-sm leading-7 text-on-charcoal/75">
+              <p className="flex gap-3 text-sm leading-6 text-on-charcoal/75">
                 <MapPin className="mt-1 size-5 shrink-0 text-primary-container" />
                 Esuk Utan Industrial Layout, beside PPMC Depot, Calabar, Cross River State, Nigeria.
               </p>
@@ -90,12 +90,12 @@ export function Assets() {
                 />
                 <div className="p-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-display text-xl font-extrabold">{tank.name}</h3>
+                    <h3 className="font-display text-lg font-extrabold">{tank.name}</h3>
                     <span className="label-caps rounded-sm bg-primary px-3 py-2 text-primary-foreground">
                       {tank.tag}
                     </span>
                   </div>
-                  <p className="mt-5 text-3xl font-extrabold text-primary-container">
+                  <p className="mt-5 text-2xl font-extrabold text-primary-container">
                     {tank.capacity}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export function Assets() {
           <div>
             <p className="label-caps text-primary-dark">Oil Tanker</p>
             <h2 className="headline-lg mt-4">MT YU YI</h2>
-            <p className="mt-6 text-base leading-8 text-muted-foreground">
+            <p className="mt-6 text-sm leading-7 text-muted-foreground">
               Pivot&apos;s oil tanker asset strengthens our ability to move petroleum products with
               marine scale, schedule confidence and a tighter connection between international
               sourcing and local supply.
@@ -127,12 +127,12 @@ export function Assets() {
               <div className="panel p-5">
                 <Ship className="size-5 text-primary-dark" />
                 <p className="label-caps mt-4 text-muted-foreground">Asset</p>
-                <p className="mt-1 font-display text-xl font-bold">Oil Tanker</p>
+                <p className="mt-1 font-display text-lg font-bold">Oil Tanker</p>
               </div>
               <div className="panel p-5">
                 <Gauge className="size-5 text-primary-dark" />
                 <p className="label-caps mt-4 text-muted-foreground">Function</p>
-                <p className="mt-1 font-display text-xl font-bold">Marine Logistics</p>
+                <p className="mt-1 font-display text-lg font-bold">Marine Logistics</p>
               </div>
             </div>
           </div>

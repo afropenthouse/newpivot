@@ -117,7 +117,7 @@
 
 @utility label-caps {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -127,36 +127,36 @@
 @utility display-lg {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 2.65rem;
+  font-size: 2.1rem;
   line-height: 1.02;
 
   @media (min-width: 1024px) {
-    font-size: 4.75rem;
+    font-size: 3.5rem;
   }
 }
 
 @utility headline-lg {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.12;
 
   @media (min-width: 1024px) {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 }
 
 @utility headline-md {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   line-height: 1.22;
 }
 
 @utility counter-num {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 2.8rem;
+  font-size: 2.1rem;
   line-height: 1;
   color: var(--primary);
 }
@@ -166,16 +166,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  min-height: 3rem;
+  min-height: 2.75rem;
   border-radius: 0.25rem;
   background-color: var(--primary);
   color: var(--primary-foreground);
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.875rem 1.5rem;
+  padding: 0.75rem 1.35rem;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -193,16 +193,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  min-height: 3rem;
+  min-height: 2.75rem;
   border-radius: 0.25rem;
   border: 1px solid currentColor;
   color: inherit;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.35rem;
   transition:
     background-color 180ms ease,
     color 180ms ease,
@@ -227,8 +227,8 @@
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.25rem;
-  padding: 0.85rem 1rem;
-  font-size: 0.9375rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
   outline: none;
 
   &:focus {

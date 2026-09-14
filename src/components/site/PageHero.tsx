@@ -23,7 +23,7 @@ export function PageHero({
       <div className="container-grid relative py-10 lg:py-14">
         {eyebrow && <p className="label-caps mb-5 text-primary-container">{eyebrow}</p>}
         <h1 className="display-lg max-w-4xl text-on-charcoal">{title}</h1>
-        <p className="mt-6 max-w-2xl text-base leading-8 text-on-charcoal/78">{subtitle}</p>
+        <p className="mt-6 max-w-2xl text-sm leading-7 text-on-charcoal/78">{subtitle}</p>
       </div>
     </section>
   );

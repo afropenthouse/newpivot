@@ -11,7 +11,7 @@ export function ClientsSection({
         <div>
           <p className="label-caps text-primary-dark">Our Clients</p>
           <h2 className="headline-lg mt-4">Trusted by industry leaders.</h2>
-          <p className="mt-5 text-sm leading-7 text-muted-foreground">
+          <p className="mt-5 text-sm leading-6 text-muted-foreground">
             A cleaner, more visual partner board using the same names from the current site.
           </p>
         </div>

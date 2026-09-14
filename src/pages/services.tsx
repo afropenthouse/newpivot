@@ -67,7 +67,7 @@ export function Services() {
           </div>
         </div>
         <div className="container-grid mt-12">
-          <p className="max-w-4xl text-base leading-8 text-muted-foreground">
+          <p className="max-w-4xl text-sm leading-7 text-muted-foreground">
             We understand that our success is intrinsically linked to the success of our clients.
             Our team delivers tailored energy solutions aligned to each industrial partner&apos;s
             needs and objectives, supporting growth, continuity and sustainable development.

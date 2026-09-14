@@ -19,7 +19,7 @@ export function AboutIntroSection() {
             <BadgeCheck className="mt-1 size-5 text-primary-container" />
             <div>
               <p className="font-display font-bold">Fully integrated operations</p>
-              <p className="mt-1 text-xs leading-5 text-on-charcoal/68">
+              <p className="mt-1 text-xs leading-4 text-on-charcoal/68">
                 Product sourcing, trading, logistics, distribution and storage under one disciplined
                 value chain.
               </p>
@@ -33,13 +33,13 @@ export function AboutIntroSection() {
           <span className="h-px w-10 bg-primary" /> Pivot Integrated Energy Services Ltd.
         </p>
         <h2 className="headline-lg mt-5">Affordable, reliable energy for the markets we serve.</h2>
-        <p className="mt-6 text-base leading-8 text-muted-foreground">
+        <p className="mt-6 text-sm leading-7 text-muted-foreground">
           Pivot Energy and Integrated Services Limited is a dynamic and forward-thinking indigenous
           oil and gas company founded in 2017. Our primary focus revolves around the trading,
           importation and distribution of pristine petroleum products within the vibrant Nigerian
           downstream market and Africa at large.
         </p>
-        <p className="mt-4 text-base leading-8 text-muted-foreground">
+        <p className="mt-4 text-sm leading-7 text-muted-foreground">
           We serve a diverse clientele, from individual retail consumers to industrial giants,
           tailoring our offering to meet the unique needs of each sector while maintaining quality,
           cost-efficiency and reliability.

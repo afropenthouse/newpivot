@@ -40,7 +40,7 @@ export function About() {
           <h2 className="headline-lg mt-4">
             Fully integrated energy operations, built for reliability.
           </h2>
-          <div className="mt-7 space-y-5 text-base leading-8 text-muted-foreground">
+          <div className="mt-7 space-y-5 text-sm leading-7 text-muted-foreground">
             <p>
               Pivot Energy and Integrated Services Limited is a dynamic and forward-thinking
               indigenous oil and gas company that was founded in 2017. Our primary focus revolves
@@ -91,7 +91,7 @@ export function About() {
             <h3 className="headline-md flex items-center gap-3">
               <Flag className="size-5 text-primary-container" /> Our Mission
             </h3>
-            <p className="mt-5 text-base leading-8 text-on-charcoal/74">
+            <p className="mt-5 text-sm leading-7 text-on-charcoal/74">
               To provide affordable and quality energy solutions making life better and putting
               smiles on the faces in every home on the continent.
             </p>
@@ -100,7 +100,7 @@ export function About() {
             <h3 className="headline-md flex items-center gap-3">
               <Compass className="size-5" /> Our Vision
             </h3>
-            <p className="mt-5 text-base leading-8 opacity-90">
+            <p className="mt-5 text-sm leading-7 opacity-90">
               To be the biggest energy solutions provider in Sub-Saharan Africa.
             </p>
           </div>
@@ -118,7 +118,7 @@ export function About() {
               <span className="inline-flex size-11 items-center justify-center rounded-sm bg-accent text-primary-dark">
                 <v.icon className="size-5" />
               </span>
-              <h3 className="mt-5 font-display text-lg font-bold">{v.title}</h3>
+              <h3 className="mt-5 font-display text-base font-bold">{v.title}</h3>
             </div>
           ))}
         </div>

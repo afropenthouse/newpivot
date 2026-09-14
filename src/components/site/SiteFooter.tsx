@@ -92,8 +92,8 @@ export function SiteFooter() {
                 key={office.name}
                 className="rounded-lg border border-white/10 bg-white/[0.045] p-5"
               >
-                <p className="font-display text-base font-bold">{office.name}</p>
-                <p className="mt-3 flex gap-2 text-xs leading-relaxed text-on-charcoal/65">
+                <p className="font-display text-sm font-bold">{office.name}</p>
+                <p className="mt-3 flex gap-2 text-xs leading-4 text-on-charcoal/65">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
                   {office.address}
                 </p>

@@ -23,7 +23,7 @@ export function HeroSection() {
           <h1 className="display-lg mt-6 max-w-4xl text-on-charcoal">
             Leading Energy Solutions Provider in Sub-Saharan Africa
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-on-charcoal/78">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-on-charcoal/78">
             Providing affordable and quality energy solutions to public and private sector customers
             across Nigeria&apos;s downstream market and Africa at large.
           </p>

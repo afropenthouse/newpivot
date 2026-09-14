@@ -31,7 +31,7 @@ export function ServiceCard({
             {Icon ? <Icon className="size-5" /> : <ArrowUpRight className="size-5" />}
           </span>
           <h3 className="headline-md mt-5">{title}</h3>
-          <p className="mt-4 text-sm leading-7 text-muted-foreground">{body}</p>
+          <p className="mt-4 text-sm leading-6 text-muted-foreground">{body}</p>
         </div>
       </div>
     </article>

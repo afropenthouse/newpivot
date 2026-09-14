@@ -30,7 +30,7 @@ export function WhyItMattersSection() {
           {points.map((point) => (
             <div key={point} className="rounded-lg border border-white/10 bg-white/[0.055] p-5">
               <BadgeCheck className="size-5 text-primary-container" />
-              <p className="mt-4 text-sm leading-7 text-on-charcoal/72">{point}</p>
+              <p className="mt-4 text-sm leading-6 text-on-charcoal/72">{point}</p>
             </div>
           ))}
         </div>

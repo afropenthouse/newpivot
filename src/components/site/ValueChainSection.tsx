@@ -12,10 +12,10 @@ export function ValueChainSection({ items }: { items: ValueChainItem[] }) {
               <span className="inline-flex size-11 items-center justify-center rounded-sm bg-charcoal text-primary-container">
                 <item.icon className="size-5" />
               </span>
-              <span className="font-display text-4xl font-extrabold text-muted">0{index + 1}</span>
+              <span className="font-display text-3xl font-extrabold text-muted">0{index + 1}</span>
             </div>
-            <h3 className="mt-6 font-display text-xl font-extrabold">{item.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p>
+            <h3 className="mt-6 font-display text-lg font-extrabold">{item.title}</h3>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.body}</p>
           </article>
         ))}
       </div>
