@@ -1,53 +1,95 @@
-# Pivot Integrated Energy Services Ltd
+# Pivot Integrated Energy
 
-A modern, responsive marketing website for **Pivot Integrated Energy Services Ltd**, an indigenous oil and gas company founded in 2017. The site communicates the company's downstream energy operations — bulk importation, trading, retail distribution, industrial supply, and aviation fuel services — across Nigeria and Sub-Saharan Africa.
+The Pivot corporate website, built with **Next.js App Router**, React 19, TypeScript and Tailwind CSS v4. The 2026 design, photography and profile download are retained.
 
-## Tech Stack
+## Run locally
 
-- **React 19** + **TypeScript**
-- **Vite** for build tooling
-- **Tailwind CSS v4** for styling
-- **shadcn/ui** + **Radix UI** for accessible components
-- **Lucide React** for icons
-- **Sonner** for toast notifications
-
-## Getting Started
+Use Node.js 20.9 or newer and npm.
 
 ```sh
 npm install
 npm run dev
 ```
 
-## Available Scripts
+Open [localhost:3000](http://localhost:3000). Each page has its own route file and can be opened directly or refreshed.
 
-| Script              | Description               |
-| ------------------- | ------------------------- |
-| `npm run dev`       | Start development server  |
-| `npm run build`     | Production build          |
-| `npm run build:dev` | Development build         |
-| `npm run preview`   | Preview production build  |
-| `npm run lint`      | Run ESLint                |
-| `npm run format`    | Format code with Prettier |
-
-## Project Structure
-
+```sh
+npm run build       # Create a production build
+npm run start       # Serve the production build
+npm run typecheck   # Check TypeScript
+npm run lint        # Check code style and React hook rules
+npm run format      # Format source files
 ```
-src/
-  components/
-    site/       # Shared layout and feature components
-    ui/         # shadcn/ui component primitives
-  hooks/        # Custom React hooks
-  lib/          # Utilities and error handling
-  routes/       # Page-level components
-  styles.css    # Global styles and design tokens
-  App.tsx       # Router and metadata
-  main.tsx      # Application entry point
-```
+
+`npm run preview` is an alias for the production server; run the build first.
 
 ## Pages
 
-- `/` — Homepage with hero, stats, areas of operation, value chain, clients, and partners
-- `/about` — Company background, mission, vision, and core values
-- `/our-services` — Detailed service offerings
-- `/assets` — Storage facilities and fleet overview
-- `/contact` — Contact form and business enquiries
+| URL         | Route file                  | Page components                           |
+| ----------- | --------------------------- | ----------------------------------------- |
+| `/`         | `src/app/page.tsx`          | `src/components/home/`                    |
+| `/about`    | `src/app/about/page.tsx`    | `src/components/about/`                   |
+| `/services` | `src/app/services/page.tsx` | `src/components/services/`                |
+| `/assets`   | `src/app/assets/page.tsx`   | `src/components/assets/`                  |
+| `/gallery`  | `src/app/gallery/page.tsx`  | `src/components/gallery/PhotoGallery.tsx` |
+| `/contact`  | `src/app/contact/page.tsx`  | `src/components/contact/EnquiryForm.tsx`  |
+
+Older URLs `/about-us`, `/our-services` and `/assets-facilities` redirect to their corresponding pages. Unknown URLs use `src/app/not-found.tsx`.
+
+## Code structure
+
+```text
+src/
+  app/
+    layout.tsx                 Shared header, footer, fonts and default metadata
+    page.tsx                   Homepage composition
+    about/page.tsx
+    services/page.tsx
+    assets/page.tsx
+    gallery/page.tsx
+    contact/page.tsx
+    not-found.tsx
+  components/
+    home/
+      HeroSection.tsx
+      CompanyStats.tsx
+      CompanyIntroduction.tsx
+      ServicesOverview.tsx
+      ProductPortfolio.tsx
+      GlobalFootprint.tsx
+      PeopleBanner.tsx
+      TradingPartners.tsx
+      GalleryPreview.tsx
+      ProfileDownload.tsx
+    about/                     Story, purpose, values and leadership
+    services/                  Services and products
+    assets/                    Storage, marine and loading operations
+    gallery/PhotoGallery.tsx   Filters and accessible photo dialog
+    contact/EnquiryForm.tsx    Email enquiry draft
+    site/                      Header, footer and shared page hero
+    ui/                        Reusable UI primitives
+  hooks/                       Shared React hooks
+  lib/company.ts               Services, gallery photos, offices and profile URL
+  styles.css                   Brand tokens, global styles and responsive layouts
+public/
+  images/                      Optimised photography
+  downloads/                   2026 corporate profile PDF
+```
+
+## Editing the website
+
+- Change a page's structure in its `src/app/.../page.tsx` file.
+- Edit individual sections in the corresponding `src/components/` folder.
+- Update shared company details and photos in `src/lib/company.ts`.
+- Update page titles and descriptions using the exported `metadata` in each route.
+- Place images and downloads in `public/` and reference them with root-relative URLs.
+
+Pages and presentation sections render as Server Components by default. The mobile header, photo gallery and enquiry form use `"use client"` for interaction. The root layout supplies shared navigation and styling; Next.js handles routing and page transitions.
+
+The enquiry form opens a draft in the visitor's email app. It does not send email from a backend service.
+
+## Deployment
+
+Use a Next.js-compatible hosting environment with `npm run build` as the build command and `npm run start` as the start command. The production output is `.next/`; this project no longer builds a Vite `dist/` bundle.
+
+The Git repository remains connected to Lovable. Published Git history must not be rewritten. Hosting and editor build settings should use the Next.js commands above.

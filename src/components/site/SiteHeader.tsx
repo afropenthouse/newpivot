@@ -1,78 +1,73 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+"use client";
 
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/services", label: "Our Services" },
-  { to: "/assets", label: "Assets & Facilities" },
-  { to: "/contact", label: "Contact Us" },
+  { to: "/about", label: "About us" },
+  { to: "/services", label: "Our services" },
+  { to: "/assets", label: "Infrastructure" },
+  { to: "/gallery", label: "Gallery" },
 ];
-
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
-
+  const pathname = usePathname();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
-    <header className="sticky top-0 z-50 bg-charcoal text-on-charcoal shadow-lg shadow-black/10">
-      <div className="container-grid flex h-18 items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img
-            src="/pivot-logo-white.png"
-            alt="Pivot Integrated Energy"
-            className="h-11 w-auto object-contain"
-          />
-        </Link>
-
-        <nav className="hidden items-center gap-7 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={`relative py-7 text-sm font-semibold text-on-charcoal/78 transition-colors hover:text-primary-container ${
-                location.pathname === item.to
-                  ? "text-primary-container after:absolute after:inset-x-0 after:bottom-0 after:h-1 after:bg-primary"
-                  : ""
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <Link to="/contact" className="btn-primary hidden lg:inline-flex">
-          Request Supply
-        </Link>
-
-        <button
-          type="button"
-          aria-label="Toggle navigation"
-          onClick={() => setOpen((v) => !v)}
-          className="grid size-10 place-items-center rounded-sm border border-white/15 lg:hidden"
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
-      </div>
-
-      {open && (
-        <nav className="border-t border-white/10 bg-charcoal lg:hidden">
-          <div className="container-grid flex flex-col py-2">
-            {nav.map((item) => (
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
+      <header className="site-header">
+        <div className="container-grid header-inner">
+          <Link href="/" aria-label="Pivot Energy home">
+            <img src="/pivot-logo-white.png" alt="Pivot Integrated Energy" />
+          </Link>
+          <nav aria-label="Main navigation" className="desktop-nav">
+            {nav.map((n) => (
               <Link
-                key={item.to}
-                to={item.to}
+                key={n.to}
+                href={n.to}
                 onClick={() => setOpen(false)}
-                className={`border-b border-white/10 py-4 text-sm font-semibold last:border-0 ${
-                  location.pathname === item.to ? "text-primary-container" : "text-on-charcoal/80"
-                }`}
+                aria-current={pathname === n.to ? "page" : undefined}
               >
-                {item.label}
+                {n.label}
               </Link>
             ))}
-          </div>
-        </nav>
-      )}
-    </header>
+          </nav>
+          <Link className="header-contact" href="/contact">
+            Let's talk <ArrowUpRight size={17} />
+          </Link>
+          <button
+            className="menu-toggle"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X /> : <Menu />}
+          </button>
+        </div>
+        {open && (
+          <nav id="mobile-nav" aria-label="Mobile navigation">
+            {[...nav, { to: "/contact", label: "Contact us" }].map((n) => (
+              <Link
+                key={n.to}
+                href={n.to}
+                onClick={() => setOpen(false)}
+                aria-current={pathname === n.to ? "page" : undefined}
+              >
+                {n.label}
+                <ArrowUpRight size={16} />
+              </Link>
+            ))}
+          </nav>
+        )}
+      </header>
+    </>
   );
 }
