@@ -1,6 +1,3 @@
-import { ArrowDownToLine } from "lucide-react";
-import { profileUrl } from "@/lib/company";
-
 export function CompanyStory() {
   return (
     <section className="container-grid section-space intro-grid">
@@ -26,9 +23,6 @@ export function CompanyStory() {
           guide our business. Long-standing relationships with global trading partners help us
           deliver reliable and efficient energy solutions.
         </p>
-        <a href={profileUrl} download className="text-link">
-          Read our 2026 profile <ArrowDownToLine size={18} />
-        </a>
       </div>
       <img
         className="about-photo"

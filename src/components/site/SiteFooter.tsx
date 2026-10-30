@@ -1,6 +1,6 @@
-import { ArrowUpRight, ArrowDownToLine } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { offices, profileUrl } from "@/lib/company";
+import { offices } from "@/lib/company";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -54,13 +54,6 @@ export function SiteFooter() {
           <Link href="/contact" className="footer-location">
             View all five offices <ArrowUpRight size={15} />
           </Link>
-        </div>
-        <div>
-          <h3>Get to know Pivot</h3>
-          <p>Explore our capabilities and international operations.</p>
-          <a href={profileUrl} download className="footer-location">
-            Corporate profile 2026 <ArrowDownToLine size={16} />
-          </a>
         </div>
       </div>
       <div className="container-grid footer-bottom">

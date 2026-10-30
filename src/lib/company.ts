@@ -1,5 +1,3 @@
-export const profileUrl = "/downloads/pivot-corporate-profile-2026.pdf";
-
 export const services = [
   {
     title: "Petroleum products trading",

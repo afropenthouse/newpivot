@@ -7,10 +7,10 @@ export function ProductPortfolio() {
           Gasoline <small>PMS</small>
         </strong>
         <strong>
-          Gasoil <small>AGO</small>
+          Gasoil (Diesel) <small>AGO</small>
         </strong>
         <strong>
-          Base Oils <small>LUBRICANT FEEDSTOCK</small>
+          Base Oils <small>Lubricant Feedstock</small>
         </strong>
       </div>
     </section>

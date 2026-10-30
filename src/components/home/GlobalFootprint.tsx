@@ -36,7 +36,6 @@ export function GlobalFootprint() {
             <strong>{value}</strong>
           </div>
         ))}
-        <p>Capacities as reported in our 2026 corporate profile.</p>
       </div>
     </section>
   );

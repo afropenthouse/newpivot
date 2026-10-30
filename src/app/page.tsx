@@ -8,7 +8,6 @@ import { GlobalFootprint } from "@/components/home/GlobalFootprint";
 import { PeopleBanner } from "@/components/home/PeopleBanner";
 import { TradingPartners } from "@/components/home/TradingPartners";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
-import { ProfileDownload } from "@/components/home/ProfileDownload";
 
 export const metadata: Metadata = {
   title: "Energy for today, tomorrow & the future",
@@ -38,7 +37,6 @@ export default function HomePage() {
       <PeopleBanner />
       <TradingPartners />
       <GalleryPreview />
-      <ProfileDownload />
     </main>
   );
 }
