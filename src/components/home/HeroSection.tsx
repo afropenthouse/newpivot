@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="home-hero">
       <img
         className="hero-photo"
-        src="/images/station.webp"
+        src="/new_pictures/home.jpeg"
         alt="Pivot Energy retail station in Nigeria"
         fetchPriority="high"
       />

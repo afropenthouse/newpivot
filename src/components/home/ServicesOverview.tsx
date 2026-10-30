@@ -22,8 +22,10 @@ export function ServicesOverview() {
         <div className="solution-grid">
           {services.map((s) => (
             <Link href="/services" key={s.title} className="solution-card">
-              <div className="solution-image">
-                <img src={s.image} alt="" loading="lazy" />
+              <div className={`solution-image${s.images.length > 1 ? " solution-image-pair" : ""}`}>
+                {s.images.map((image) => (
+                  <img key={image.src} src={image.src} alt="" loading="lazy" />
+                ))}
                 <span>
                   <ArrowUpRight size={23} />
                 </span>

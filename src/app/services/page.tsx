@@ -6,16 +6,16 @@ import { ProductsSection } from "@/components/services/ProductsSection";
 export const metadata: Metadata = {
   title: "Our services",
   description:
-    "Petroleum products trading, supply, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
+    "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
   openGraph: {
     title: "Our services",
     description:
-      "Petroleum products trading, supply, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
+      "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
   },
   twitter: {
     title: "Our services",
     description:
-      "Petroleum products trading, supply, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
+      "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
   },
 };
 

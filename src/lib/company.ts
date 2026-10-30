@@ -2,26 +2,43 @@ export const services = [
   {
     title: "Petroleum products trading",
     body: "Local and international trading of Gasoline, Gasoil and Base Oils, connecting global supply with the markets that need it.",
-    image: "/images/diesel.webp",
+    images: [
+      { src: "/new_pictures/filling.jpeg", alt: "Pivot filling station" },
+      {
+        src: "/new_pictures/filling2.jpeg",
+        alt: "Pivot attendant refuelling a customer's vehicle",
+      },
+    ],
     tag: "01 / TRADING",
   },
   {
     title: "Supply & sourcing",
-    body: "Structured importation and sourcing of refined petroleum products to meet evolving market demand efficiently and reliably.",
-    image: "/images/station.webp",
+    body: "Sourcing refined petroleum products through established supplier relationships to meet evolving market demand efficiently and reliably.",
+    images: [{ src: "/new_pictures/supply.jpeg", alt: "Petroleum product supply and sourcing" }],
     tag: "02 / SUPPLY",
   },
   {
     title: "Distribution & logistics",
     body: "Dependable product distribution across retail, commercial and industrial sectors through an established operational network.",
-    image: "/images/refuelling.webp",
+    images: [
+      { src: "/new_pictures/logistics.jpeg", alt: "Petroleum product distribution and logistics" },
+    ],
     tag: "03 / DISTRIBUTION",
   },
   {
     title: "Storage infrastructure",
     body: "Strategic storage capabilities for bulk product handling, efficient operations and consistent supply across key locations.",
-    image: "/images/canopy.webp",
+    images: [{ src: "/new_pictures/storage.jpeg", alt: "Petroleum storage infrastructure" }],
     tag: "04 / STORAGE",
+  },
+  {
+    title: "Importation",
+    body: "Importation of refined petroleum products from international suppliers, coordinating marine shipments to support dependable supply across our markets.",
+    images: [
+      { src: "/new_pictures/importation.jpeg", alt: "Petroleum tanker at sea" },
+      { src: "/new_pictures/import2.jpeg", alt: "Marine tanker transporting petroleum products" },
+    ],
+    tag: "05 / IMPORTATION",
   },
 ];
 
