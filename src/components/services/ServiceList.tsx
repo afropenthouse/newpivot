@@ -7,7 +7,9 @@ export function ServiceList() {
     <section className="container-grid section-space service-list">
       {services.map((s) => (
         <article key={s.title}>
-          <div className={`service-images${s.images.length > 1 ? " service-images-pair" : ""}`}>
+          <div
+            className={`service-images${s.images.length > 1 ? " service-images-pair" : ""}${s.imageAlignment === "left" ? " photo-pair-left" : ""}`}
+          >
             {s.images.map((image) => (
               <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
             ))}

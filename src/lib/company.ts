@@ -1,6 +1,7 @@
 export const services = [
   {
     title: "Petroleum products trading",
+    imageAlignment: "left",
     body: "Local and international trading of Gasoline, Gasoil and Base Oils, connecting global supply with the markets that need it.",
     images: [
       { src: "/new_pictures/filling.jpeg", alt: "Pivot filling station" },

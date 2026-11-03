@@ -1,7 +1,9 @@
 const values = [
+  ["Accountability", "Taking responsibility for our decisions, actions and commitments."],
   ["Integrity", "Ethical standards and professionalism in every engagement."],
   ["Honesty", "Transparency, accountability and trust in our business practices."],
   ["Impact", "Solutions that create measurable value and sustainable growth."],
+  ["Innovation", "Finding better ways to deliver energy and meet our customers' evolving needs."],
   ["Service", "Customer satisfaction and stakeholder excellence."],
   ["Quality", "High operational and product standards across our activities."],
 ];

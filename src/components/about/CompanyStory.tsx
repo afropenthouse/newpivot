@@ -9,19 +9,31 @@ export function CompanyStory() {
           energy forward.
         </h2>
         <p className="body-copy">
-          Pivot Integrated Energy is an indigenous oil and gas company established in 2017, focused
-          on the trading, supply, distribution and logistics of refined petroleum products across
-          global markets.
+          Pivot Energy and Integrated Services Limited is a dynamic, forward-thinking indigenous oil
+          and gas company founded in 2017. Our primary focus is the trading, importation and
+          distribution of quality petroleum products within the Nigerian downstream market and
+          across Africa.
         </p>
         <p className="body-copy">
-          Our operational base is in West Africa, with international trade operations in London,
-          Ghana, Tanzania and Dubai. We supply Gasoline, Gasoil and Base Oils to a diverse client
-          base, connecting global relationships with local understanding.
+          We serve a diverse clientele, from individual retail consumers to large industrial
+          businesses, tailoring our offerings to meet the unique needs of each sector.
         </p>
         <p className="body-copy">
-          Strong corporate governance, disciplined financial management and operational excellence
-          guide our business. Long-standing relationships with global trading partners help us
-          deliver reliable and efficient energy solutions.
+          Our fully integrated business operations span the downstream petroleum value chain. From
+          product sourcing to distribution and beyond, we coordinate every aspect of our services to
+          deliver efficiency, reliability and customer satisfaction at every step.
+        </p>
+        <p className="body-copy">
+          Our dedication to quality and excellence is reflected in strategic partnerships with
+          reputable trading companies and experienced refiners. These relationships help us remain
+          competitive and offer a diverse portfolio of high-quality petroleum products, with
+          cost-efficiency and dependable supply at the heart of our business.
+        </p>
+        <p className="body-copy">
+          We are committed to advancing innovation, sustainability and customer-focused solutions in
+          the sub-Saharan oil and gas sector. As we grow, we strive to exceed expectations, uphold
+          the highest industry standards and contribute to the sustainable development of the global
+          energy landscape.
         </p>
       </div>
       <img

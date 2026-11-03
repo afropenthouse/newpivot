@@ -9,7 +9,7 @@ export function PurposeSection() {
             <br />
             for energy in Africa.
           </h2>
-          <p>To become the leading integrated energy solutions provider in Sub-Saharan Africa.</p>
+          <p>To be the biggest energy solutions provider in sub-Saharan Africa.</p>
         </div>
         <div>
           <p className="eyebrow light">OUR MISSION</p>
@@ -19,9 +19,8 @@ export function PurposeSection() {
             lasting value.
           </h2>
           <p>
-            To provide affordable, high-quality and sustainable energy solutions that improve lives,
-            support economic growth and create lasting value for households, businesses and
-            industries across Africa.
+            To provide affordable and quality energy solutions, making life better and putting
+            smiles on faces in every home on the continent.
           </p>
         </div>
       </div>
