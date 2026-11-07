@@ -1313,14 +1313,6 @@ h3 {
   color: #a94d08;
   margin-top: 20px;
 }
-@media (min-width: 1550px) {
-  .hero-content {
-    padding-top: 100px;
-  }
-  .home-hero {
-    min-height: 730px;
-  }
-}
 @media (max-width: 1100px) {
   .container-grid {
     padding-inline: 35px;
