@@ -1,4 +1,12 @@
-export const services = [
+type Service = {
+  title: string;
+  body: string;
+  images: { src: string; alt: string; objectPosition?: string }[];
+  imageAlignment?: "left";
+  tag: string;
+};
+
+export const services: Service[] = [
   {
     title: "Petroleum products trading",
     imageAlignment: "left",
@@ -15,7 +23,13 @@ export const services = [
   {
     title: "Supply & sourcing",
     body: "Sourcing refined petroleum products through established supplier relationships to meet evolving market demand efficiently and reliably.",
-    images: [{ src: "/new_pictures/supply.jpeg", alt: "Petroleum product supply and sourcing" }],
+    images: [
+      {
+        src: "/new_pictures/supply-pivot.jpeg",
+        alt: "Red petroleum tanker with PIVOT lettering",
+        objectPosition: "75% center",
+      },
+    ],
     tag: "02 / SUPPLY",
   },
   {
@@ -29,7 +43,13 @@ export const services = [
   {
     title: "Storage infrastructure",
     body: "Strategic storage capabilities for bulk product handling, efficient operations and consistent supply across key locations.",
-    images: [{ src: "/new_pictures/storage.jpeg", alt: "Petroleum storage infrastructure" }],
+    images: [
+      {
+        src: "/new_pictures/storage-pivot.jpeg",
+        alt: "Petroleum storage tanks with PIVOT lettering on the foreground tank",
+        objectPosition: "35% 60%",
+      },
+    ],
     tag: "04 / STORAGE",
   },
   {

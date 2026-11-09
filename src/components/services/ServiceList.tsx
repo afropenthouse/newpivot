@@ -10,7 +10,13 @@ export function ServiceList() {
             className={`service-images${s.images.length > 1 ? " service-images-pair" : ""}${s.imageAlignment === "left" ? " photo-pair-left" : ""}`}
           >
             {s.images.map((image) => (
-              <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
+              <img
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                style={{ objectPosition: image.objectPosition }}
+              />
             ))}
           </div>
           <div>

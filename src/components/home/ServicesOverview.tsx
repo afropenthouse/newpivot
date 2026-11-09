@@ -25,7 +25,13 @@ export function ServicesOverview() {
                 className={`solution-image${s.images.length > 1 ? " solution-image-pair" : ""}${s.imageAlignment === "left" ? " photo-pair-left" : ""}`}
               >
                 {s.images.map((image) => (
-                  <img key={image.src} src={image.src} alt="" loading="lazy" />
+                  <img
+                    key={image.src}
+                    src={image.src}
+                    alt=""
+                    loading="lazy"
+                    style={{ objectPosition: image.objectPosition }}
+                  />
                 ))}
                 <span>
                   <ArrowUpRight size={23} />
