@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/company";
 
@@ -15,13 +14,13 @@ export function ServicesOverview() {
               Energy at every step.
             </h2>
           </div>
-          <Link className="text-link" href="/services">
+          <a className="text-link" href="/services">
             All our services <ArrowUpRight size={18} />
-          </Link>
+          </a>
         </div>
         <div className="solution-grid">
           {services.map((s) => (
-            <Link href="/services" key={s.title} className="solution-card">
+            <a href="/services" key={s.title} className="solution-card">
               <div
                 className={`solution-image${s.images.length > 1 ? " solution-image-pair" : ""}${s.imageAlignment === "left" ? " photo-pair-left" : ""}`}
               >
@@ -35,7 +34,7 @@ export function ServicesOverview() {
               <p className="eyebrow">{s.tag}</p>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

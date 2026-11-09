@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 
 export function CompanyIntroduction() {
@@ -30,9 +29,9 @@ export function CompanyIntroduction() {
           international trading to the service at our pumps, we connect expertise, infrastructure
           and people to keep businesses and communities moving.
         </p>
-        <Link className="text-link" href="/about">
+        <a className="text-link" href="/about">
           Get to know us <ArrowUpRight size={18} />
-        </Link>
+        </a>
       </div>
     </section>
   );

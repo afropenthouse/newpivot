@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { offices } from "@/lib/company";
 export function SiteFooter() {
   return (
@@ -13,19 +12,19 @@ export function SiteFooter() {
             Powered by Pivot.
           </h2>
         </div>
-        <Link href="/contact" className="action-button">
+        <a href="/contact" className="action-button">
           Talk to our team <ArrowUpRight size={19} />
-        </Link>
+        </a>
       </div>
       <div className="container-grid footer-grid">
         <div>
-          <Link href="/">
+          <a href="/">
             <img
               src="/pivot-logo-white.png"
               alt="Pivot Integrated Energy"
               className="footer-logo"
             />
-          </Link>
+          </a>
           <p>
             Energy for today, tomorrow
             <br />
@@ -43,17 +42,17 @@ export function SiteFooter() {
             ["Gallery", "/gallery"],
             ["Contact us", "/contact"],
           ].map(([label, to]) => (
-            <Link key={to} href={to!}>
+            <a key={to} href={to!}>
               {label}
-            </Link>
+            </a>
           ))}
         </div>
         <div>
           <h3>Visit our head office</h3>
           <p>{offices[0]!.address}</p>
-          <Link href="/contact" className="footer-location">
+          <a href="/contact" className="footer-location">
             View all five offices <ArrowUpRight size={15} />
-          </Link>
+          </a>
         </div>
       </div>
       <div className="container-grid footer-bottom">

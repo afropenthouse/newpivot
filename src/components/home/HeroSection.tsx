@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 
 export function HeroSection() {
@@ -27,12 +26,12 @@ export function HeroSection() {
           supply and distribution, rooted in Africa.
         </p>
         <div className="hero-actions">
-          <Link className="action-button" href="/services">
+          <a className="action-button" href="/services">
             Explore our solutions <ArrowUpRight size={18} />
-          </Link>
-          <Link className="hero-link" href="/about">
+          </a>
+          <a className="hero-link" href="/about">
             Discover Pivot <ArrowRight size={17} />
-          </Link>
+          </a>
         </div>
       </div>
       <div className="container-grid hero-bottom">

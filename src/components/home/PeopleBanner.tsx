@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export function PeopleBanner() {
@@ -13,9 +12,9 @@ export function PeopleBanner() {
           <br />
           with great people.
         </h2>
-        <Link href="/gallery" className="action-button">
+        <a href="/gallery" className="action-button">
           Life at Pivot <ArrowUpRight size={18} />
-        </Link>
+        </a>
       </div>
     </section>
   );

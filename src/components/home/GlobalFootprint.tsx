@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight, Globe2 } from "lucide-react";
 
 export function GlobalFootprint() {
@@ -15,9 +14,9 @@ export function GlobalFootprint() {
           With our operational base in West Africa and international trade operations in London,
           Ghana, Tanzania and Dubai, we connect global supply with local demand.
         </p>
-        <Link href="/assets" className="text-link">
+        <a href="/assets" className="text-link">
           Explore our infrastructure <ArrowUpRight size={18} />
-        </Link>
+        </a>
         <div className="market-list">
           <Globe2 size={22} />
           <span>Nigeria · Ghana · United Kingdom · Tanzania · U.A.E.</span>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { CompanyStats } from "@/components/home/CompanyStats";
 import { CompanyIntroduction } from "@/components/home/CompanyIntroduction";
@@ -9,20 +8,10 @@ import { PeopleBanner } from "@/components/home/PeopleBanner";
 import { TradingPartners } from "@/components/home/TradingPartners";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Energy for today, tomorrow & the future",
   description:
     "Pivot Integrated Energy delivers petroleum trading, supply, distribution and storage solutions. African roots. International reach.",
-  openGraph: {
-    title: "Energy for today, tomorrow & the future",
-    description:
-      "Pivot Integrated Energy delivers petroleum trading, supply, distribution and storage solutions. African roots. International reach.",
-  },
-  twitter: {
-    title: "Energy for today, tomorrow & the future",
-    description:
-      "Pivot Integrated Energy delivers petroleum trading, supply, distribution and storage solutions. African roots. International reach.",
-  },
 };
 
 export default function HomePage() {

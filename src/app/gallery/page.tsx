@@ -1,17 +1,8 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/site/PageHero";
 import { PhotoGallery } from "@/components/gallery/PhotoGallery";
-export const metadata: Metadata = {
+export const metadata = {
   title: "Gallery",
   description: "Meet the people and explore the stations behind Pivot Integrated Energy.",
-  openGraph: {
-    title: "Gallery",
-    description: "Meet the people and explore the stations behind Pivot Integrated Energy.",
-  },
-  twitter: {
-    title: "Gallery",
-    description: "Meet the people and explore the stations behind Pivot Integrated Energy.",
-  },
 };
 export default function GalleryPage() {
   return (

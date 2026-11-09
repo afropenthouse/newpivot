@@ -1,22 +1,11 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/site/PageHero";
 import { ServiceList } from "@/components/services/ServiceList";
 import { ProductsSection } from "@/components/services/ProductsSection";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Our services",
   description:
     "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
-  openGraph: {
-    title: "Our services",
-    description:
-      "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
-  },
-  twitter: {
-    title: "Our services",
-    description:
-      "Petroleum products trading, supply, importation, distribution, logistics and storage for Gasoline, Gasoil and Base Oils.",
-  },
 };
 
 export default function ServicesPage() {

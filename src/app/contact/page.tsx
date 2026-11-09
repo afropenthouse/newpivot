@@ -1,22 +1,11 @@
-import type { Metadata } from "next";
 import { EnquiryForm } from "@/components/contact/EnquiryForm";
 import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { offices } from "@/lib/company";
-export const metadata: Metadata = {
+export const metadata = {
   title: "Contact us",
   description:
     "Connect with Pivot Integrated Energy in Lagos, Port Harcourt, Accra, London and Dubai.",
-  openGraph: {
-    title: "Contact us",
-    description:
-      "Connect with Pivot Integrated Energy in Lagos, Port Harcourt, Accra, London and Dubai.",
-  },
-  twitter: {
-    title: "Contact us",
-    description:
-      "Connect with Pivot Integrated Energy in Lagos, Port Harcourt, Accra, London and Dubai.",
-  },
 };
 export default function ContactPage() {
   return (
