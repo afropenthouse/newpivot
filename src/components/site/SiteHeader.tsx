@@ -15,7 +15,7 @@ export function SiteHeader({ pathname }: { pathname: string }) {
         Skip to content
       </a>
       <header className="site-header">
-        <div className="container-grid header-inner">
+        <div className="masthead-container header-inner">
           <a href="/" aria-label="Pivot Energy home">
             <img src="/pivot-logo-white.png" alt="Pivot Integrated Energy" />
           </a>
